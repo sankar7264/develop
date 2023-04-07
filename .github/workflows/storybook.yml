@@ -4,11 +4,11 @@ on:
  #   branches:
   #    - develop # if any push happens on branch `develop`, run this workflow. You could also add `paths` to detect changes in specific folder
 push:
-    branches: [master]
+    branches: [develop]
   pull_request:
   
     # The branches below must be a subset of the branches above
-    branches: [master]
+    branches: [develop]
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
