@@ -1,10 +1,6 @@
 # Presidio Web 
-### Presidio added
 
-## Description
-##123 567 89
-##123456
-##aaaaa bbbbb cccc ddd
+
 Presidio's front end React application.
 
 ### This application uses following technologies -
