@@ -8,7 +8,7 @@ const { i18n } = require('./i18n.config')
 
 const PROTOCOL = 'https'
 const WORDDPRESS_ENDPOINT =
-  process.env.NEXT_PUBLIC_WORDPRESS_ENDPOINT || 'example.com'
+  process.env.NEXT_PUBLIC_WORDPRESS_ENDPOINT.split('://')[1]
 
 const config = {
   reactStrictMode: true,
