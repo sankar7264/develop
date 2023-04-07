@@ -1,24 +1,23 @@
 name: Storybook
 on:
-push:
-branches:
-- develop
-pull_request:
-# The branches below must be a subset of the branches above
-branches: [develop]
-jobs:
-build-and-deploy:
-runs-on: ubuntu-latest
-steps:
-- name: Checkout
-uses: actions/checkout@v2.3.1
-  - name: Install and Build
-    run: |
-      npm ci
-      npm run build-storybook
+  push:
+    branches:
+      - develop # if any push happens on branch `develop`, run this workflow. You could also add `paths` to detect changes in specific folder
 
-  - name: Deploy
-    uses: JamesIves/github-pages-deploy-action@4.1.4
-    with:
-      branch: gh-pages
-      folder: storybook-static # output folder from `npm run build-storybook`
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.1
+
+      - name: Install and Build
+        run: |
+          npm ci
+          npm run build-storybook
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          branch: gh-pages
+          folder: storybook-static # output folder from `npm run build-storybook`
