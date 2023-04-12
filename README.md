@@ -14,7 +14,7 @@ Presidio's front end React application.
 
 #### Architecture diagram and stack details [here](https://t3thinktank.atlassian.net/wiki/spaces/PT/pages/3056009378/Architecture+Diagram+for+Presidio+Frontend)
 
-#### Coding guidelines and editor setup
+##### Coding guidelines and editor setup
 
 We are following an airbnb style guide for linting which is further extensible. These standards are well documented [here](https://t3thinktank.atlassian.net/wiki/spaces/PT/pages/3023110179/Development+Best+Practices+-+Frontend)
 
